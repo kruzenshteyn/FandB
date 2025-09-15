@@ -1,0 +1,42 @@
+.hero{
+  min-height: 490px;
+  /* background-image: url(images/1_1.png);   */
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../images/1_1.png);
+
+  padding: 175px 165px 40px 165px;
+  box-sizing: border-box;
+}
+
+.hero__title{
+  font-family: Cormorant;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  font-family: Cormorant;
+  color: white;
+  max-width: 700px;
+}
+
+.hero__text{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  leading-trim: NONE;
+  line-height: 150%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: rgba(255, 255, 255, 1);
+  max-width: 635px;
+}
+
+.hero__link{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 23px;
+  leading-trim: NONE;
+  line-height: 150%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: rgb(244, 255, 84);
+}
