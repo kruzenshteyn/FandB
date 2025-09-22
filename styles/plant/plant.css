@@ -1,0 +1,38 @@
+.plant{
+  width: 255px;
+  height: 493px;
+  background-color: antiquewhite;
+
+  border: red 2px solid;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.plant__top{
+  height: 37%;
+  background-color: aqua;
+  padding: 16px;
+}
+
+.plant__number{
+  width: 24px;
+  height: 24px;
+  color: rgba(137, 157, 157, 1);
+  border: 1px solid rgba(137, 157, 157, 1);
+  border-radius: 50%;  
+}
+
+.plant__image{
+  width: 120px;
+  transform: rotate(90deg);
+}
+
+.plant__bottom{
+  height: 63%;
+  background-color: azure;
+}
+
+.plant__title{
+  color: aliceblue;
+}
