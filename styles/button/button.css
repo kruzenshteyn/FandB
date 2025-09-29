@@ -3,4 +3,7 @@
   width: 145px;
   height: 45px;
   color: rgba(186, 226, 73, 1);
+  background-color: transparent;
+
+  cursor: url('../../images/pointer.png'), pointer;
 }
