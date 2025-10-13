@@ -7,7 +7,7 @@
   padding: 20px 11.8%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 30px;
+  gap: 30px 30px;
 }
 
 .plants__slider{

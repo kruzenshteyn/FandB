@@ -74,9 +74,9 @@
 
 }
 
-.help__button:hover{
+/* .help__button:hover{
   background: rgba(145, 172, 70, 1);
-}
+} */
 
 .help__button_checked{
   background: rgba(137, 157, 157, 1);

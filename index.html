@@ -28,35 +28,10 @@
       <p class="hero__link">Исследовать -></p>
     </section>
     <section class="plants">
-      <div class="plants__container">
-        <div class="plant">
-          <div class="plant__top">
-            <div class="plant__number">1.1</div>
-            <div class="plant__container">
-              
-              <img src="./images/fig_1.png" alt="fig_1" class="plant__image"/>
-            </div>
-            
-          </div>
-          <div class="plant__bottom">
-            <h3 class="plant__title">Fig. 1 (plant)</h3>
-            <p class="plant__text">Имеется спорная точка зрения, гласящая примерно 
-              следующее: активно развивающиеся страны третьего мира 
-              своевременно верифицированы.
-            </p>
-            <button class="button plant__button">Подробнее</button>
+      <div class="plants__container" id="plants__container">
 
-          </div>
-        </div>
-        <div class="plant">
-          
-        </div>
-        <div class="plant">
-          
-        </div>
-        <div class="plant">
-          
-        </div>
+
+        
       </div>
       <div class="plants__slider"></div>
 
@@ -72,13 +47,34 @@
       </p>
       <form class="help__form" id="help_form" name="help__form">
         <input class="help__input" name="help__name" placeholder="Имя">
-        <input class="help__input" name="help__email" placeholder="Email" type="email">
-        <button type="submit" class="button help__button">Отправить</button>
+        <input class="help__input" name="help__email"  id="help__email" placeholder="Email" type="email">
+        <button type="submit" class="button help__button" id="help__button">Отправить</button>
       </form>
     </section>
   </main>
   <footer class="footer">
     Footer
   </footer>
+  <template id="plant__template">
+        <div class="plant">
+          <div class="plant__top">
+            <div class="plant__number">1.1</div>
+            <div class="plant__container">              
+              <img src="./images/fig_1.png" alt="fig_1" class="plant__image"/>
+            </div>            
+          </div>
+          <div class="plant__bottom">
+            <h3 class="plant__title">Fig. 1 (plant)</h3>
+            <p class="plant__text">Имеется спорная точка зрения, гласящая примерно 
+              следующее: активно развивающиеся страны третьего мира 
+              своевременно верифицированы.
+            </p>
+            <button class="button plant__button">Подробнее</button>
+
+          </div>
+        </div>
+  </template>
+
+  <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>
