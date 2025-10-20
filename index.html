@@ -10,10 +10,10 @@
   <header class="header">
     <div class="header__logo"></div>
     <div class="header__menu">
-      <div class="header__item">Каталог</div>
-      <div class="header__item">Галерея</div>
+      <a class="header__item" href="#idHelp">Каталог</a>
+      <a class="header__item" href="#idPlants">Галерея</a>
       <div class="header__item">О лаборатории</div>
-      <div class="header__item">Контакты</div>
+      <a class="header__item" href="#help_form">Контакты</a>
     </div>
     <div class="header__block">
       <div class="header__search"></div>
@@ -27,17 +27,15 @@
         которые представляют собой яркий пример европейского типа политической и социальной культуры.</p>
       <p class="hero__link">Исследовать -></p>
     </section>
-    <section class="plants">
+    <section class="plants" id="idPlants">
       <div class="plants__container" id="plants__container">
 
-
-        
       </div>
       <div class="plants__slider"></div>
 
       </div>
     </section>
-    <section class="help">
+    <section class="help" id="idHelp">
       <h2 class="help__title">Помочь проекту</h2>
       <p class="help__text">
         Равным образом, экономическая повестка сегодняшнего дня не даёт нам иного выбора, 
@@ -52,7 +50,7 @@
       </form>
     </section>
   </main>
-  <footer class="footer">
+  <footer class="footer" id="idFooter">
     Footer
   </footer>
   <template id="plant__template">
@@ -60,7 +58,7 @@
           <div class="plant__top">
             <div class="plant__number">1.1</div>
             <div class="plant__container">              
-              <img src="./images/fig_1.png" alt="fig_1" class="plant__image"/>
+              <img src="" alt="fig_1" class="plant__image"/>
             </div>            
           </div>
           <div class="plant__bottom">
@@ -70,11 +68,21 @@
               своевременно верифицированы.
             </p>
             <button class="button plant__button">Подробнее</button>
-
           </div>
         </div>
   </template>
-
+  <dialog class="popup">
+    <div class="popup__main">
+      <img src="" alt="fig_1" class="popup__image"/>
+      <div class="popup__container">
+        <button class="button popup__close">Close</button>
+        <h3 class="popup__title"></h3>
+        <p class="popup__text"></p>
+      </div>
+    </div>
+    
+    
+  </dialog>  
   <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>

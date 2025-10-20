@@ -1,0 +1,43 @@
+.popup{
+  max-height: 80vh;
+  max-width: 80vw;
+
+  background-color: grey;
+  border: none;
+  border-radius: 30px;
+}
+
+.popup::backdrop {
+  background-color: black;
+  opacity: 0.5;
+}
+
+.popup__main{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  
+}
+
+.popup__close{
+
+}
+
+.popup__image{
+  max-height: 80vh;
+  max-width: 80vw;
+
+  justify-self: center;
+}
+
+.popup__container{
+
+}
+
+.popup__text{
+
+}
+
+.popup__title{
+
+}

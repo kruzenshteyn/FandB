@@ -1,31 +1,52 @@
 import { arr_plants } from './plants.js';
 
 
-console.log(arr_plants);
+const tmp__plant = document.getElementById('plant__template');
+const container_plant = document.getElementById('plants__container');
 
-  const tmp__plant = document.getElementById('plant__template');
-  const container_plant = document.getElementById('plants__container');
+const popup = document.querySelector('.popup');
 
+popup.querySelector('.popup__close').addEventListener("click", () => {
+  popup.close();
+});
+
+function ChangePopupData(e)
+{  
+  console.log(e);
+
+  const title = e.querySelector('.plant__title').innerHTML;
+  const text = e.querySelector('.plant__text').innerHTML;
+  const src = e.querySelector('.plant__image')?.src;
+  
+  const data = {title:title, text:text, src:src};
+
+  popup.querySelector('.popup__title').innerHTML  = data.title;
+  popup.querySelector('.popup__text').innerHTML  = data.text;
+  popup.querySelector('.popup__image').src  = data.src;
+
+}
 
 function AddPlant(data)
 {
-  const plant_first = tmp__plant.content.cloneNode('true');  
+  const plant_first = tmp__plant.content.cloneNode('true');   
+  
   plant_first.querySelector('.plant__title').innerHTML  = data.title;
   plant_first.querySelector('.plant__text').innerHTML  = data.text;
   plant_first.querySelector('.plant__image').src  = data.src;
+
+  plant_first.querySelector('.plant__button').addEventListener("click", (e) => {
+    ChangePopupData(e.target.closest('.plant'));
+    popup.showModal();
+  });
+
   container_plant.appendChild(plant_first);
 }
 
 
-
-const plant0 = {
-  title:'Hello', 
-  text:"Example text",
-  src:'./images/fig_1.png'
-};
-
 AddPlant(arr_plants[0]);
 AddPlant(arr_plants[1]);
+AddPlant(arr_plants[2]);
+AddPlant(arr_plants[3]);
 
 const formSend = document.querySelector('.help__form');
 const inputName = document.getElementsByName('help__name')[0];
@@ -52,4 +73,4 @@ formSend.addEventListener('submit', function(e){
   console.log('End of function');
 });
 
-console.log(inputEmail);
+
