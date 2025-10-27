@@ -54,6 +54,10 @@
   justify-content: space-between;
 }
 
+.plant__bottom_light{
+  background-color: rgb(109, 95, 95);
+}
+
 .plant__title{
   color: white;
   margin: 0;
@@ -63,3 +67,17 @@
   flex-grow: 1;
 }
 
+.plant__like{
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 20px;
+
+  background-color: transparent;
+  border: 2px solid red;
+}
+
+.plant__like_liked{
+  background-color: red;
+}

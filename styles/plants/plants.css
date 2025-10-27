@@ -14,3 +14,18 @@
   background-color: red;
 }
 
+@media (max-width: 1400px) {
+  .plants__container{    
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px 30px;
+  }
+}
+
+@media (max-width: 1140px) {
+  .plants__container{    
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 30px;
+  }
+}
+
+/* https://doka.guide/css/media/ */

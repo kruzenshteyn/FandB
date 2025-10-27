@@ -12,13 +12,14 @@ popup.querySelector('.popup__close').addEventListener("click", () => {
 
 function ChangePopupData(e)
 {  
-  console.log(e);
-
+  
   const title = e.querySelector('.plant__title').innerHTML;
   const text = e.querySelector('.plant__text').innerHTML;
   const src = e.querySelector('.plant__image')?.src;
   
   const data = {title:title, text:text, src:src};
+
+  console.log(e.id);
 
   popup.querySelector('.popup__title').innerHTML  = data.title;
   popup.querySelector('.popup__text').innerHTML  = data.text;
@@ -26,7 +27,7 @@ function ChangePopupData(e)
 
 }
 
-function AddPlant(data)
+function AddPlant(data, idx)
 {
   const plant_first = tmp__plant.content.cloneNode('true');   
   
@@ -34,19 +35,42 @@ function AddPlant(data)
   plant_first.querySelector('.plant__text').innerHTML  = data.text;
   plant_first.querySelector('.plant__image').src  = data.src;
 
+  if(idx % 2 == 1)
+    plant_first.querySelector('.plant__bottom').classList.add('plant__bottom_light');
+
+  plant_first.id = data.id;
+  
   plant_first.querySelector('.plant__button').addEventListener("click", (e) => {
     ChangePopupData(e.target.closest('.plant'));
     popup.showModal();
+  });
+
+  const btnLike = plant_first.querySelector('.plant__like');
+  btnLike.addEventListener("click", (e) => {
+    btnLike.classList.toggle('plant__like_liked');
   });
 
   container_plant.appendChild(plant_first);
 }
 
 
-AddPlant(arr_plants[0]);
-AddPlant(arr_plants[1]);
-AddPlant(arr_plants[2]);
-AddPlant(arr_plants[3]);
+const LoadPlants = (src) =>{
+
+  // for (let i = 0; i < src.length; i++){
+  //   AddPlant(src[i]);
+  // }
+
+  for(var i in src){
+    AddPlant(arr_plants[i], i);
+  }
+}
+
+LoadPlants(arr_plants);
+
+// AddPlant(arr_plants[0]);
+// AddPlant(arr_plants[1]);
+// AddPlant(arr_plants[2]);
+// AddPlant(arr_plants[3]);
 
 const formSend = document.querySelector('.help__form');
 const inputName = document.getElementsByName('help__name')[0];
